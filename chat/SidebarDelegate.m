@@ -16,10 +16,7 @@
     return [item isLeaf];
 }
 - (BOOL)outlineView:(NSOutlineView*)outlineView isGroupItem:(id)item {
-    //asdf
-    //if([item blah]){
-    //    return YES;
-    //}
+
     return ![item isLeaf];
 }
 @end

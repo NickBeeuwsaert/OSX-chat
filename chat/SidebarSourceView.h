@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OutlineView.h"
 @interface SidebarSourceView : NSObject
 
-- (NSArray*)childrenForItem:(id)item outlineView:(OutlineView*)outlineView;
-- (NSInteger)outlineView:(OutlineView*)outlineView numberOfChildrenOfItem:(id)item;
-- (id)outlineView:(OutlineView*)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item;
-- (id)outlineView:(OutlineView*)outlineView child:(NSInteger)childIndex ofItem:(id)item;
-- (BOOL)outlineView:(OutlineView*)outlineView isItemExpandable:(id)item;
+@property (strong) NSTreeNode *rootNode;
+@property (strong) NSTreeNode *userNode;
+@property (strong) NSTreeNode *roomNode;
+
+- (void)initData;
+- (NSArray*)childrenForItem:(id)item outlineView:(NSOutlineView*)outlineView;
+- (NSInteger)outlineView:(NSOutlineView*)outlineView numberOfChildrenOfItem:(id)item;
+- (id)outlineView:(NSOutlineView*)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item;
+- (id)outlineView:(NSOutlineView*)outlineView child:(NSInteger)childIndex ofItem:(id)item;
+- (BOOL)outlineView:(NSOutlineView*)outlineView isItemExpandable:(id)item;
 @end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01806E791525E9BD00C7ECAA /* OutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01806E781525E9BD00C7ECAA /* OutlineView.m */; };
 		01AEDB35151E99D8003EE383 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AEDB34151E99D8003EE383 /* Cocoa.framework */; };
 		01AEDB3F151E99D8003EE383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01AEDB3D151E99D8003EE383 /* InfoPlist.strings */; };
 		01AEDB41151E99D8003EE383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AEDB40151E99D8003EE383 /* main.m */; };
@@ -33,8 +32,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01806E771525E9BD00C7ECAA /* OutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineView.h; sourceTree = "<group>"; };
-		01806E781525E9BD00C7ECAA /* OutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineView.m; sourceTree = "<group>"; };
 		01AEDB30151E99D8003EE383 /* chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AEDB34151E99D8003EE383 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		01AEDB37151E99D8003EE383 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -128,8 +125,6 @@
 				01AEDB49151E99D8003EE383 /* MainMenu.xib */,
 				01E2A6ED152522F4002A1DB6 /* SidebarDelegate.h */,
 				01E2A6EE152522F4002A1DB6 /* SidebarDelegate.m */,
-				01806E771525E9BD00C7ECAA /* OutlineView.h */,
-				01806E781525E9BD00C7ECAA /* OutlineView.m */,
 				01E2A6EA152522C9002A1DB6 /* SidebarSourceView.h */,
 				01E2A6EB152522C9002A1DB6 /* SidebarSourceView.m */,
 				01AEDB3B151E99D8003EE383 /* Supporting Files */,
@@ -280,7 +275,6 @@
 				01AEDB48151E99D8003EE383 /* AppDelegate.m in Sources */,
 				01E2A6EC152522C9002A1DB6 /* SidebarSourceView.m in Sources */,
 				01E2A6EF152522F4002A1DB6 /* SidebarDelegate.m in Sources */,
-				01806E791525E9BD00C7ECAA /* OutlineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

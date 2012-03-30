@@ -10,29 +10,58 @@
 
 @implementation SidebarSourceView
 
-- (NSArray*)childrenForItem:(id)item outlineView:(OutlineView*)outline {
+@synthesize rootNode;
+@synthesize userNode;
+@synthesize roomNode;
+
+- (NSArray*)childrenForItem:(id)item outlineView:(NSOutlineView*)outlineViews {
     NSArray *chillun = nil;
     
     if(item == nil){
-        chillun = [[outline rootNode] childNodes];
+        chillun = [rootNode childNodes];
     }else {
         chillun = [item childNodes];
     }
     
     return chillun;
 }
-- (NSInteger)outlineView:(OutlineView*)outlineView numberOfChildrenOfItem:(id)item{
-    if([outlineView rootNode] == nil) return 0; //nothing yet!
+
+- (void) initData {
+    rootNode = [[NSTreeNode alloc] initWithRepresentedObject:nil ];
+    // Create the user tree node
+    userNode = [[NSTreeNode alloc] initWithRepresentedObject: @"USERS"];
+    {
+        for(int x = 0; x< 10; x++){
+            NSTreeNode *node = [[NSTreeNode alloc] initWithRepresentedObject: [NSString stringWithFormat:@"user %d", x]];
+            [userNode.mutableChildNodes addObject: node];
+        }
+    }
+    
+    //create the Rooms tree node
+    roomNode = [[NSTreeNode alloc] initWithRepresentedObject:@"ROOMS"];
+    {
+        for(int x = 0; x< 10; x++){
+            NSTreeNode *node = [[NSTreeNode alloc] initWithRepresentedObject: [NSString stringWithFormat:@"#room %d", x]];
+            [roomNode.mutableChildNodes addObject: node];
+        }
+    }
+    [[rootNode mutableChildNodes]addObject:roomNode];
+    [[rootNode mutableChildNodes]addObject:userNode];
+    
+    //[outlineView reloadItem:rootNode reloadChildren:YES];
+}
+- (NSInteger)outlineView:(NSOutlineView*)outlineView numberOfChildrenOfItem:(id)item{
+    if(rootNode == nil) return 0; //nothing yet!
     
     return [[self childrenForItem:item outlineView:outlineView] count];
 }
-- (id)outlineView:(OutlineView*)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
+- (id)outlineView:(NSOutlineView*)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
     return [item representedObject];
 }
-- (id)outlineView:(OutlineView*)outlineView child:(NSInteger)child ofItem:(id)item {
+- (id)outlineView:(NSOutlineView*)outlineView child:(NSInteger)child ofItem:(id)item {
     return [[self childrenForItem:item outlineView:outlineView] objectAtIndex:child];
 }
-- (BOOL)outlineView:(OutlineView*)outlineView isItemExpandable:(id)item {
+- (BOOL)outlineView:(NSOutlineView*)outlineView isItemExpandable:(id)item {
     return ![item isLeaf];
 }
 @end
