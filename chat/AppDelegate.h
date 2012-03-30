@@ -7,9 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "SidebarDelegate.h"
+#import "SidebarSourceView.h"
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSOutlineView *sidebar;
+@property (assign) IBOutlet SidebarDelegate* sidebarDelegate;
+@property (assign) IBOutlet SidebarSourceView* sidebarSource;
 
 @end

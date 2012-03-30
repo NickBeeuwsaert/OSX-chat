@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01806E791525E9BD00C7ECAA /* OutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01806E781525E9BD00C7ECAA /* OutlineView.m */; };
 		01AEDB35151E99D8003EE383 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AEDB34151E99D8003EE383 /* Cocoa.framework */; };
 		01AEDB3F151E99D8003EE383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01AEDB3D151E99D8003EE383 /* InfoPlist.strings */; };
 		01AEDB41151E99D8003EE383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AEDB40151E99D8003EE383 /* main.m */; };
@@ -17,6 +18,8 @@
 		01AEDB54151E99D8003EE383 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AEDB34151E99D8003EE383 /* Cocoa.framework */; };
 		01AEDB5C151E99D8003EE383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01AEDB5A151E99D8003EE383 /* InfoPlist.strings */; };
 		01AEDB5F151E99D8003EE383 /* chatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AEDB5E151E99D8003EE383 /* chatTests.m */; };
+		01E2A6EC152522C9002A1DB6 /* SidebarSourceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E2A6EB152522C9002A1DB6 /* SidebarSourceView.m */; };
+		01E2A6EF152522F4002A1DB6 /* SidebarDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E2A6EE152522F4002A1DB6 /* SidebarDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,25 +33,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01806E771525E9BD00C7ECAA /* OutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineView.h; sourceTree = "<group>"; };
+		01806E781525E9BD00C7ECAA /* OutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineView.m; sourceTree = "<group>"; };
 		01AEDB30151E99D8003EE383 /* chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AEDB34151E99D8003EE383 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		01AEDB37151E99D8003EE383 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		01AEDB38151E99D8003EE383 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		01AEDB39151E99D8003EE383 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		01AEDB3C151E99D8003EE383 /* chat-Info.plist */ = {isa = PBXFileReference; path = "chat-Info.plist"; sourceTree = "<group>"; };
+		01AEDB3C151E99D8003EE383 /* chat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "chat-Info.plist"; sourceTree = "<group>"; };
 		01AEDB3E151E99D8003EE383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01AEDB40151E99D8003EE383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		01AEDB42151E99D8003EE383 /* chat-Prefix.pch */ = {isa = PBXFileReference; path = "chat-Prefix.pch"; sourceTree = "<group>"; };
+		01AEDB42151E99D8003EE383 /* chat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "chat-Prefix.pch"; sourceTree = "<group>"; };
 		01AEDB44151E99D8003EE383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		01AEDB46151E99D8003EE383 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		01AEDB46151E99D8003EE383 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01AEDB47151E99D8003EE383 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01AEDB4A151E99D8003EE383 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		01AEDB51151E99D8003EE383 /* chatTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AEDB52151E99D8003EE383 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		01AEDB59151E99D8003EE383 /* chatTests-Info.plist */ = {isa = PBXFileReference; path = "chatTests-Info.plist"; sourceTree = "<group>"; };
+		01AEDB59151E99D8003EE383 /* chatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "chatTests-Info.plist"; sourceTree = "<group>"; };
 		01AEDB5B151E99D8003EE383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		01AEDB5D151E99D8003EE383 /* chatTests.h */ = {isa = PBXFileReference; path = chatTests.h; sourceTree = "<group>"; };
+		01AEDB5D151E99D8003EE383 /* chatTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chatTests.h; sourceTree = "<group>"; };
 		01AEDB5E151E99D8003EE383 /* chatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chatTests.m; sourceTree = "<group>"; };
+		01E2A6EA152522C9002A1DB6 /* SidebarSourceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarSourceView.h; sourceTree = "<group>"; };
+		01E2A6EB152522C9002A1DB6 /* SidebarSourceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarSourceView.m; sourceTree = "<group>"; };
+		01E2A6ED152522F4002A1DB6 /* SidebarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarDelegate.h; sourceTree = "<group>"; };
+		01E2A6EE152522F4002A1DB6 /* SidebarDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,12 @@
 				01AEDB46151E99D8003EE383 /* AppDelegate.h */,
 				01AEDB47151E99D8003EE383 /* AppDelegate.m */,
 				01AEDB49151E99D8003EE383 /* MainMenu.xib */,
+				01E2A6ED152522F4002A1DB6 /* SidebarDelegate.h */,
+				01E2A6EE152522F4002A1DB6 /* SidebarDelegate.m */,
+				01806E771525E9BD00C7ECAA /* OutlineView.h */,
+				01806E781525E9BD00C7ECAA /* OutlineView.m */,
+				01E2A6EA152522C9002A1DB6 /* SidebarSourceView.h */,
+				01E2A6EB152522C9002A1DB6 /* SidebarSourceView.m */,
 				01AEDB3B151E99D8003EE383 /* Supporting Files */,
 			);
 			path = chat;
@@ -263,6 +278,9 @@
 			files = (
 				01AEDB41151E99D8003EE383 /* main.m in Sources */,
 				01AEDB48151E99D8003EE383 /* AppDelegate.m in Sources */,
+				01E2A6EC152522C9002A1DB6 /* SidebarSourceView.m in Sources */,
+				01E2A6EF152522F4002A1DB6 /* SidebarDelegate.m in Sources */,
+				01806E791525E9BD00C7ECAA /* OutlineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +454,7 @@
 				01AEDB64151E99D9003EE383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01AEDB65151E99D9003EE383 /* Build configuration list for PBXNativeTarget "chatTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +463,7 @@
 				01AEDB67151E99D9003EE383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

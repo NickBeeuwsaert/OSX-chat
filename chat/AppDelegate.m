@@ -11,6 +11,9 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize sidebar = sidebar;
+@synthesize sidebarSource = sidebarSource;
+@synthesize sidebarDelegate = sidebarDelegate;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
