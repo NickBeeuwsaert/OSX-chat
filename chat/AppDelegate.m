@@ -15,10 +15,17 @@
 @synthesize sidebarSource = sidebarSource;
 @synthesize sidebarDelegate = sidebarDelegate;
 
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+return YES;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
     [sidebarSource initData];
+    //NSTreeNode *me = [[NSTreeNode alloc] initWithRepresentedObject:@"razerwolf"];
+    //[[sidebarSource.userNode mutableChildNodes] addObject:me];
     [sidebar reloadData];
 }
 
